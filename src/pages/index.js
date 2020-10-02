@@ -1,16 +1,12 @@
 import React from "react";
 import {Link} from 'gatsby';
 import Navbar from '../components/Navbar.js'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      Hello world!
-      <div>
-        <Link to="/blog">Blog Page</Link>
-      </div>
-      <a href="https://www.gatsbyjs.org">Gatsby Docs</a>
-    </div>
+    <Layout>
+      Hello from Gatsby Home Page.
+  </Layout>
   )
 }
