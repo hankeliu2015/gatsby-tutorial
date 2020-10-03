@@ -10,7 +10,7 @@ module.exports = {
     description: "some random description",
     author: "@HHudson",
     data: ["item1", "item2"],
-    persoon: {name: "Henry", age: 33},
+    person: {name: "Henry", age: 33},
   },
   /* Your site config here */
   plugins: [`gatsby-plugin-styled-components`],
