@@ -1,6 +1,6 @@
 import React from "react";
-import {Link} from 'gatsby';
-import Navbar from '../components/Navbar.js';
+// import {Link} from 'gatsby';
+// import Navbar from '../components/Navbar.js';
 import Layout from '../components/layout';
 import { ExampleButton } from '../components/button.js'
 
