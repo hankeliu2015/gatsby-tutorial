@@ -16,5 +16,4 @@ export default class blog extends Component {
       </Layout>
     );
   }
-
 }
