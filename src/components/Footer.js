@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div>
-      this is the gatsby page footer
+      <p>this is the gatsby page footer</p>
     </div>
   )
 };

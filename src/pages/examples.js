@@ -8,7 +8,7 @@ const examples = ({data}) => {
   const {site:{info:{author}}} = data;
   return (
     <Layout>
-      <h1>This is example page of graphQL staticQuery</h1>
+      <p>This is example page of graphQL staticQuery</p>
       <Header />
       <h3>author: {author} </h3>
     </Layout>
