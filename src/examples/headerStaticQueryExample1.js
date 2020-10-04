@@ -1,3 +1,5 @@
+//staticQuery 
+
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -20,7 +22,7 @@ const getData = graphal`
 const Header = () => {
   const data = useStaticQuery(getData);
   console.log(data);
-  
+
   return (
     <div>
       <h2>{data.site.siteMetadata.person.name}</h2>
