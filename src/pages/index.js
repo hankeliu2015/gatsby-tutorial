@@ -6,6 +6,7 @@ import { ExampleButton } from '../components/button.js'
 
 export default function Home() {
   return (
+
     <Layout>
       <h1 style={{color:'green', textTransform: "uppercase"}}>Hello from Gatsby Home Page</h1>
       <h1>Hello people</h1>
