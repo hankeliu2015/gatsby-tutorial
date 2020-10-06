@@ -7,12 +7,11 @@ const getImages = graphql`
   {
     fixed: file(relativePath: {eq: "image2.jpg"}) {
       childImageSharp {
-        fixed(width: 300, height: 400) {
+        fixed(width: 200, height: 400, grayscale: true) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-
     fluid: file(relativePath: {eq: "image3.jpg"}) {
       childImageSharp {
         fluid {
@@ -20,7 +19,6 @@ const getImages = graphql`
         }
       }
     }
-
   }
 `
 const Images = () => {
