@@ -14,11 +14,11 @@ const ComponentName = ({data}) => {
       <section className={Styles.page}>
         {products.map(product => {
           return (
-            <aticle key={product.id}>
+            <article key={product.id}>
               <Image fluid={product.image.fluid} alt={product.title}></Image>
               <h3>{product.title}<span></span>{product.price}</h3>
               <Link to={`/products/${product.slug}`}>More details</Link>
-            </aticle>
+            </article>
           )
         })}
       </section>

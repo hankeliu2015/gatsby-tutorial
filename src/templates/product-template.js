@@ -1,6 +1,7 @@
 import React from 'react';
 
-const productTemplate = () => {
+const productTemplate = (props) => {
+  console.log(props);
   return (
     <div>
       this is product template
