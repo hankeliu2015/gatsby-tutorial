@@ -7,10 +7,21 @@ import {Link} from 'gatsby';
 
 
 const ComponentName = ({data}) => {
+  const {allContentfulProduct: {nodes: products}} = data;
+  // console.log(products);
+
   return (
     <Layout>
       <section className={Styles.page}>
-        <h1>This is products page</h1>
+        {products.map(product => {
+          return (
+            <aticle key={product.id}>
+              <Image fluid={product.image.fluid} alt={product.title}></Image>
+              <h3>{product.title}<span></span>{product.price}</h3>
+              <Link to={`/products/${product.slug}`}>More details</Link>
+            </aticle>
+          )
+        })}
       </section>
     </Layout>
   )
@@ -22,11 +33,12 @@ export const query = graphql`
   {
     allContentfulProduct {
       nodes {
+        id
         title
         price
         image {
           fluid {
-            src
+            ...GatsbyContentfulFluid
           }
         }
         slug
