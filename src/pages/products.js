@@ -8,7 +8,6 @@ import {Link} from 'gatsby';
 
 const ComponentName = ({data}) => {
   const {allContentfulProduct: {nodes: products}} = data;
-  // console.log(products);
 
   return (
     <Layout>
