@@ -1,12 +1,48 @@
-import React from 'react';
+import React from "react"
+import { graphql, Link } from "gatsby"
+import Layout from "../components/layout";
+import Image from "gatsby-image";
 
-const productTemplate = (props) => {
-  console.log(props);
+// const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
+const ComponentName = ({ data }) => {
   return (
-    <div>
-      this is product template
-    </div>
+    <Layout>
+      <div style={{textAlign: "center"}}>
+        <Link to="/products">back to products</Link>
+        <h1>single product</h1>
+      </div>
+    </Layout>
   )
-};
+}
 
-export default productTemplate
+export const query = graphql`
+  query GetSingleProduct($slug: String) {
+    product: contentfulProduct(slug: {eq: $slug}) {
+      title
+      price
+      image {
+        fixed (width: 300) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      info {
+        info
+      }
+    }
+  }
+`
+
+export default ComponentName
+
+// import React from 'react';
+//
+// const productTemplate = (props) => {
+//   console.log(props);
+//   return (
+//     <div>
+//       this is product template
+//     </div>
+//   )
+// };
+//
+// export default productTemplate
